@@ -62,8 +62,13 @@ ol {
 }
 
 .content__list {
+  position: relative;
   block-size: 298px;
   overflow: auto;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-block-end: 30px;
 }
 
 .visually-hidden {
@@ -93,6 +98,7 @@ ol {
 }
 
 .result__video-container {
+  position: relative;
   inline-size: 711px;
   block-size: 386px;
   margin-block-end: 16px;
@@ -125,8 +131,8 @@ ol {
   min-inline-size: 225px;
   min-block-size: 27px;
   border: none;
-  border-block-start: 1px solid #fff;
-  border-block-end: 1px solid #fff;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
   color: #fff;
   font-family: inherit;
   font-size: inherit;
@@ -161,7 +167,7 @@ ol {
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
   font-family: inherit;
   font-weight: 700;
@@ -206,6 +212,7 @@ ol {
 
 .content__card-link:focus {
   outline: none;
+
 }
 
 .content__card_link:focus-visible {
@@ -235,6 +242,9 @@ ol {
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-description {
